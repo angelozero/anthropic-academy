@@ -1,4 +1,4 @@
-# anthropic-academy
+# Anthropic Academy
 
 # Referencias
 [Info claude-sonnet-4-0' is deprecated and will reach end-of-life on June 15th, 2026.](https://platform.claude.com/docs/en/about-claude/model-deprecations)
