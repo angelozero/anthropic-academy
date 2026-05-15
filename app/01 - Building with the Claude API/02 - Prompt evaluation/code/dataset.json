@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Escreva uma função Python usando boto3 que liste todos os buckets S3 de uma conta AWS e retorne uma lista contendo apenas os nomes dos buckets que foram criados nos últimos 30 dias."
+  },
+  {
+    "task": "Crie um JSON que represente uma política IAM da AWS que permita acesso somente leitura (GetObject e ListBucket) a um bucket S3 específico chamado 'meu-bucket-dados' e todos os seus objetos."
+  },
+  {
+    "task": "Escreva uma função Python usando boto3 que receba o nome de uma instância EC2 (tag Name) e retorne o seu estado atual (running, stopped, terminated, etc)."
+  }
+]
