@@ -1,0 +1,65 @@
+[
+  {
+    "output": "# One-Day Meal Plan for High-Endurance Vegan Athlete\n\nHere is a one-day meal plan for a high-endurance athlete with vegan and gluten-free requirements:\n\n* **Calorie Target:** Approximately 3100 calories\n* **Macronutrient Breakdown:** Protein (130g), Fat (95g), Carbs (420g)\n\n## Meal Plan:\n\n* **Breakfast (7:00 AM):** Gluten-free oatmeal (100g dry weight) with coconut milk (240ml), banana (120g), seeds (pumpkin 30g, sunflower 20g), and cinnamon.\n  * Protein: 12g, Fat: 18g, Carbs: 85g\n\n* **Mid-Morning Snack (10:00 AM):** Dates (80g) with tahini (25g) and fresh berries (100g).\n  * Protein: 6g, Fat: 12g, Carbs: 60g\n\n* **Lunch (1:00 PM):** Quinoa bowl (80g dry weight) with roasted chickpeas (120g), sweet potato (180g), spinach (80g), olive oil (15ml), lemon juice, and sea salt.\n  * Protein: 18g, Fat: 14g, Carbs: 95g\n\n* **Afternoon Snack (4:00 PM):** Vegan protein smoothie: pea protein powder (30g), oat milk (300ml), mango (120g), flax seeds (15g), and cinnamon.\n  * Protein: 28g, Fat: 8g, Carbs: 45g\n\n* **Dinner (7:00 PM):** Baked tofu (180g) with roasted broccoli (200g), brown rice (80g dry weight), sesame oil (10ml), garlic, and ginger.\n  * Protein: 32g, Fat: 16g, Carbs: 80g\n\n* **Evening Snack (9:00 PM):** Rice cakes (50g) with hummus (40g) and cucumber slices (80g).\n  * Protein: 6g, Fat: 7g, Carbs: 25g\n\nThis meal plan emphasizes plant-based protein sources (legumes, tofu, seeds), complex carbohydrates for sustained energy, and healthy fats to support endurance performance while meeting all dietary restrictions.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178",
+        "weight": "72",
+        "goal": "High-endurance athlete requiring 3000+ calories daily",
+        "restrictions": "Vegan, gluten-free, nut allergy"
+      },
+      "solution_criteria": [
+        "Meal plan totals 3000+ calories across all meals",
+        "All meals are vegan, gluten-free, and nut-free",
+        "Includes adequate protein sources for muscle recovery and endurance performance",
+        "Plan covers breakfast, lunch, dinner, and snacks for a full day"
+      ],
+      "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+      "scenario": "Testing with multiple simultaneous dietary restrictions (vegan, gluten-free, and nut allergy) for a high-endurance athlete requiring 3000+ calories"
+    },
+    "score": 7,
+    "reasoning": "The solution successfully meets all mandatory requirements by providing a daily caloric total, complete macronutrient breakdown, and detailed meals with exact portions and timing. All dietary restrictions are properly addressed with vegan, gluten-free, nut-free options. However, there is a significant discrepancy between the stated macronutrient targets (130g protein, 95g fat, 420g carbs) and the actual meal totals (102g protein, 75g fat, 390g carbs), representing calculation errors of approximately 21% for protein and 10% for carbs. While the actual protein content is still adequate for an athlete, the misrepresentation of the breakdown undermines accuracy. The plan itself is practical and well-organized, but the mathematical inconsistency is a notable flaw."
+  },
+  {
+    "output": "# One-Day Meal Plan for Muscle Building\n\nHere is a one-day meal plan for an athlete aiming to build muscle mass while maintaining a lean physique:\n\n* **Calorie Target:** Approximately 3000 calories\n* **Macronutrient Breakdown:** Protein (180g), Fat (100g), Carbs (375g)\n\n**Meal Plan:**\n\n* **Breakfast (7:00 AM):** Scrambled eggs (3 whole eggs, 150g) with rice (100g cooked) and saut\u00e9ed vegetables - onions (50g) and tomatoes (80g) cooked in olive oil (15g).\n  * Protein: 22g, Fat: 20g, Carbs: 35g\n\n* **Mid-Morning Snack (10:00 AM):** Boiled eggs (2 eggs, 100g) with white rice cakes (50g) and a banana alternative - dates (80g).\n  * Protein: 18g, Fat: 12g, Carbs: 50g\n\n* **Lunch (1:00 PM):** Grilled chicken breast (200g) with lentils (150g cooked), steamed carrots (100g), and olive oil drizzle (10g).\n  * Protein: 55g, Fat: 15g, Carbs: 60g\n\n* **Afternoon Snack (4:00 PM):** Canned tuna in water (150g drained) mixed with white rice (80g cooked) and cucumber (100g).\n  * Protein: 35g, Fat: 8g, Carbs: 28g\n\n* **Dinner (7:00 PM):** Grilled beef (180g lean cut) with jasmine rice (120g cooked), steamed broccoli (150g), and onions (60g) saut\u00e9ed in olive oil (12g).\n  * Protein: 40g, Fat: 20g, Carbs: 95g\n\n* **Evening Snack (9:30 PM):** Boiled eggs (2 eggs, 100g) with white bread (60g).\n  * Protein: 18g, Fat: 12g, Carbs: 20g\n\n**Total Daily Macros: Protein 188g | Fat 87g | Carbs 288g | Calories ~2970**\n\nThis meal plan emphasizes halal-certified lean protein sources (chicken, beef, fish, eggs) combined with rice and lentils for sustained energy and muscle recovery. All foods are budget-friendly and support your strength training goals.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180",
+        "weight": "85",
+        "goal": "Build muscle mass through strength training while maintaining lean physique",
+        "restrictions": "Halal certified foods only, no pork, no alcohol, limited to chicken, beef, fish, eggs, rice, lentils, and vegetables due to food preferences"
+      },
+      "solution_criteria": [
+        "All meals use only halal-certified ingredients from the specified food list",
+        "Total daily protein intake supports muscle-building goals for an 85kg strength athlete",
+        "Meal plan is nutritionally balanced across breakfast, lunch, dinner, and snacks",
+        "All meals accommodate the athlete's limited food preferences without substitutions"
+      ],
+      "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+      "scenario": "Testing with religious dietary requirements (halal) combined with sports nutrition needs for a strength-training athlete with limited food preferences"
+    },
+    "score": 8,
+    "reasoning": "The solution successfully meets all mandatory requirements with clear daily totals, macronutrient breakdowns, and detailed meal specifications with portions and timing. The meal plan appropriately addresses the athlete's muscle-building goals with adequate protein intake and respects the halal and food preference restrictions. However, minor issues exist: the caloric total slightly misses the 3000-calorie target, and white bread appears to exceed the explicitly stated food list. These are secondary deficiencies that don't invalidate the core solution but prevent a perfect score."
+  },
+  {
+    "output": "# One-Day Meal Plan for Competitive Cyclist with IBS Management\n\nHere is a low-FODMAP, gluten-free meal plan designed to build muscle, improve endurance, and manage IBS symptoms:\n\n* **Calorie Target:** Approximately 2,800 calories\n* **Macronutrient Breakdown:** Protein (140g), Fat (85g), Carbs (380g)\n\n---\n\n## **Meal Plan:**\n\n* **Breakfast (7:00 AM):** Rice cereal (50g) with lactose-free milk (240ml), blueberries (80g), and olive oil (10ml). Rice toast (2 slices, 50g) with butter (15g).\n  * Protein: 12g, Fat: 18g, Carbs: 65g\n  * **Prep time:** 5 minutes | **Cost:** $2.50\n\n* **Mid-Morning Snack (10:00 AM):** Banana (120g) with sunflower seed butter (30g).\n  * Protein: 9g, Fat: 16g, Carbs: 28g\n  * **Prep time:** 2 minutes | **Cost:** $1.50\n\n* **Lunch (1:00 PM):** Grilled chicken breast (150g), white rice (200g cooked), steamed carrots (150g) with olive oil (10ml).\n  * Protein: 45g, Fat: 12g, Carbs: 75g\n  * **Prep time:** 12 minutes | **Cost:** $4.00\n\n* **Pre-Workout Snack (3:30 PM):** Rice cakes (30g) with honey (20g) and pure peanut butter (20g).\n  * Protein: 8g, Fat: 12g, Carbs: 35g\n  * **Prep time:** 3 minutes | **Cost:** $1.50\n\n* **Dinner (7:00 PM):** Baked salmon (140g), boiled potatoes (200g), steamed zucchini (180g) with olive oil (10ml).\n  * Protein: 40g, Fat: 18g, Carbs: 55g\n  * **Prep time:** 15 minutes | **Cost:** $5.00\n\n* **Evening Snack (9:30 PM):** Lactose-free yogurt (150g, plain) with gluten-free granola (30g) and strawberries (70g).\n  * Protein: 16g, Fat: 9g, Carbs: 32g\n  * **Prep time:** 2 minutes | **Cost:** $2.00\n\n---\n\n**Daily Budget Total:** $16.50 (slightly over\u2014reduce salmon to 120g to meet $15 budget)\n\n**Key Features:**\n- All foods are low-FODMAP and gluten-free compliant\n- High protein supports muscle recovery and building\n- Strategic carb timing around training sessions\n- Easily digestible foods minimize IBS flare-ups\n- Simple meals requiring minimal preparation time",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "75 kg",
+        "goal": "Build muscle and improve endurance for competitive cycling while managing IBS symptoms",
+        "restrictions": "Low-FODMAP diet, no gluten, budget of $15 per day, maximum 15 minutes prep time per meal"
+      },
+      "solution_criteria": [
+        "All meals comply with low-FODMAP and gluten-free restrictions",
+        "Total daily cost does not exceed $15",
+        "Each meal requires 15 minutes or less preparation",
+        "Meal plan provides adequate protein and carbohydrates to support athletic performance and muscle building"
+      ],
+      "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+      "scenario": "Testing with medical dietary restrictions (low-FODMAP for IBS) alongside athletic performance goals for an athlete with budget constraints and minimal cooking time"
+    },
+    "score": 5,
+    "reasoning": "The solution successfully presents all mandatory requirements with clear formatting and structure. However, it fails to meet the secondary criteria of staying within the $15 budget (actual total is $16.50 without the suggested modification being implemented) and contains a low-FODMAP compliance error with the banana portion size. While the solution acknowledges the budget overage, it does not provide a corrected final plan, which is a critical oversight. The macronutrient targets are appropriate for the athlete's goals, and most food choices are suitable, but these violations of stated criteria prevent a higher score."
+  }
+]

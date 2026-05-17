@@ -1,0 +1,273 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">6.7 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">66.7%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with multiple simultaneous dietary restrictions (vegan, gluten-free, and nut allergy) for a high-endurance athlete requiring 3000+ calories</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 72<br><strong>goal:</strong> High-endurance athlete requiring 3000+ calories daily<br><strong>restrictions:</strong> Vegan, gluten-free, nut allergy</td>
+                <td class="criteria">• Meal plan totals 3000+ calories across all meals<br>• All meals are vegan, gluten-free, and nut-free<br>• Includes adequate protein sources for muscle recovery and endurance performance<br>• Plan covers breakfast, lunch, dinner, and snacks for a full day</td>
+                <td class="output"><pre># One-Day Meal Plan for High-Endurance Vegan Athlete
+
+Here is a one-day meal plan for a high-endurance athlete with vegan and gluten-free requirements:
+
+* **Calorie Target:** Approximately 3100 calories
+* **Macronutrient Breakdown:** Protein (130g), Fat (95g), Carbs (420g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Gluten-free oatmeal (100g dry weight) with coconut milk (240ml), banana (120g), seeds (pumpkin 30g, sunflower 20g), and cinnamon.
+  * Protein: 12g, Fat: 18g, Carbs: 85g
+
+* **Mid-Morning Snack (10:00 AM):** Dates (80g) with tahini (25g) and fresh berries (100g).
+  * Protein: 6g, Fat: 12g, Carbs: 60g
+
+* **Lunch (1:00 PM):** Quinoa bowl (80g dry weight) with roasted chickpeas (120g), sweet potato (180g), spinach (80g), olive oil (15ml), lemon juice, and sea salt.
+  * Protein: 18g, Fat: 14g, Carbs: 95g
+
+* **Afternoon Snack (4:00 PM):** Vegan protein smoothie: pea protein powder (30g), oat milk (300ml), mango (120g), flax seeds (15g), and cinnamon.
+  * Protein: 28g, Fat: 8g, Carbs: 45g
+
+* **Dinner (7:00 PM):** Baked tofu (180g) with roasted broccoli (200g), brown rice (80g dry weight), sesame oil (10ml), garlic, and ginger.
+  * Protein: 32g, Fat: 16g, Carbs: 80g
+
+* **Evening Snack (9:00 PM):** Rice cakes (50g) with hummus (40g) and cucumber slices (80g).
+  * Protein: 6g, Fat: 7g, Carbs: 25g
+
+This meal plan emphasizes plant-based protein sources (legumes, tofu, seeds), complex carbohydrates for sustained energy, and healthy fats to support endurance performance while meeting all dietary restrictions.</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution successfully meets all mandatory requirements by providing a daily caloric total, complete macronutrient breakdown, and detailed meals with exact portions and timing. All dietary restrictions are properly addressed with vegan, gluten-free, nut-free options. However, there is a significant discrepancy between the stated macronutrient targets (130g protein, 95g fat, 420g carbs) and the actual meal totals (102g protein, 75g fat, 390g carbs), representing calculation errors of approximately 21% for protein and 10% for carbs. While the actual protein content is still adequate for an athlete, the misrepresentation of the breakdown undermines accuracy. The plan itself is practical and well-organized, but the mathematical inconsistency is a notable flaw.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with religious dietary requirements (halal) combined with sports nutrition needs for a strength-training athlete with limited food preferences</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 85<br><strong>goal:</strong> Build muscle mass through strength training while maintaining lean physique<br><strong>restrictions:</strong> Halal certified foods only, no pork, no alcohol, limited to chicken, beef, fish, eggs, rice, lentils, and vegetables due to food preferences</td>
+                <td class="criteria">• All meals use only halal-certified ingredients from the specified food list<br>• Total daily protein intake supports muscle-building goals for an 85kg strength athlete<br>• Meal plan is nutritionally balanced across breakfast, lunch, dinner, and snacks<br>• All meals accommodate the athlete's limited food preferences without substitutions</td>
+                <td class="output"><pre># One-Day Meal Plan for Muscle Building
+
+Here is a one-day meal plan for an athlete aiming to build muscle mass while maintaining a lean physique:
+
+* **Calorie Target:** Approximately 3000 calories
+* **Macronutrient Breakdown:** Protein (180g), Fat (100g), Carbs (375g)
+
+**Meal Plan:**
+
+* **Breakfast (7:00 AM):** Scrambled eggs (3 whole eggs, 150g) with rice (100g cooked) and sautéed vegetables - onions (50g) and tomatoes (80g) cooked in olive oil (15g).
+  * Protein: 22g, Fat: 20g, Carbs: 35g
+
+* **Mid-Morning Snack (10:00 AM):** Boiled eggs (2 eggs, 100g) with white rice cakes (50g) and a banana alternative - dates (80g).
+  * Protein: 18g, Fat: 12g, Carbs: 50g
+
+* **Lunch (1:00 PM):** Grilled chicken breast (200g) with lentils (150g cooked), steamed carrots (100g), and olive oil drizzle (10g).
+  * Protein: 55g, Fat: 15g, Carbs: 60g
+
+* **Afternoon Snack (4:00 PM):** Canned tuna in water (150g drained) mixed with white rice (80g cooked) and cucumber (100g).
+  * Protein: 35g, Fat: 8g, Carbs: 28g
+
+* **Dinner (7:00 PM):** Grilled beef (180g lean cut) with jasmine rice (120g cooked), steamed broccoli (150g), and onions (60g) sautéed in olive oil (12g).
+  * Protein: 40g, Fat: 20g, Carbs: 95g
+
+* **Evening Snack (9:30 PM):** Boiled eggs (2 eggs, 100g) with white bread (60g).
+  * Protein: 18g, Fat: 12g, Carbs: 20g
+
+**Total Daily Macros: Protein 188g | Fat 87g | Carbs 288g | Calories ~2970**
+
+This meal plan emphasizes halal-certified lean protein sources (chicken, beef, fish, eggs) combined with rice and lentils for sustained energy and muscle recovery. All foods are budget-friendly and support your strength training goals.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution successfully meets all mandatory requirements with clear daily totals, macronutrient breakdowns, and detailed meal specifications with portions and timing. The meal plan appropriately addresses the athlete's muscle-building goals with adequate protein intake and respects the halal and food preference restrictions. However, minor issues exist: the caloric total slightly misses the 3000-calorie target, and white bread appears to exceed the explicitly stated food list. These are secondary deficiencies that don't invalidate the core solution but prevent a perfect score.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with medical dietary restrictions (low-FODMAP for IBS) alongside athletic performance goals for an athlete with budget constraints and minimal cooking time</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 75 kg<br><strong>goal:</strong> Build muscle and improve endurance for competitive cycling while managing IBS symptoms<br><strong>restrictions:</strong> Low-FODMAP diet, no gluten, budget of $15 per day, maximum 15 minutes prep time per meal</td>
+                <td class="criteria">• All meals comply with low-FODMAP and gluten-free restrictions<br>• Total daily cost does not exceed $15<br>• Each meal requires 15 minutes or less preparation<br>• Meal plan provides adequate protein and carbohydrates to support athletic performance and muscle building</td>
+                <td class="output"><pre># One-Day Meal Plan for Competitive Cyclist with IBS Management
+
+Here is a low-FODMAP, gluten-free meal plan designed to build muscle, improve endurance, and manage IBS symptoms:
+
+* **Calorie Target:** Approximately 2,800 calories
+* **Macronutrient Breakdown:** Protein (140g), Fat (85g), Carbs (380g)
+
+---
+
+## **Meal Plan:**
+
+* **Breakfast (7:00 AM):** Rice cereal (50g) with lactose-free milk (240ml), blueberries (80g), and olive oil (10ml). Rice toast (2 slices, 50g) with butter (15g).
+  * Protein: 12g, Fat: 18g, Carbs: 65g
+  * **Prep time:** 5 minutes | **Cost:** $2.50
+
+* **Mid-Morning Snack (10:00 AM):** Banana (120g) with sunflower seed butter (30g).
+  * Protein: 9g, Fat: 16g, Carbs: 28g
+  * **Prep time:** 2 minutes | **Cost:** $1.50
+
+* **Lunch (1:00 PM):** Grilled chicken breast (150g), white rice (200g cooked), steamed carrots (150g) with olive oil (10ml).
+  * Protein: 45g, Fat: 12g, Carbs: 75g
+  * **Prep time:** 12 minutes | **Cost:** $4.00
+
+* **Pre-Workout Snack (3:30 PM):** Rice cakes (30g) with honey (20g) and pure peanut butter (20g).
+  * Protein: 8g, Fat: 12g, Carbs: 35g
+  * **Prep time:** 3 minutes | **Cost:** $1.50
+
+* **Dinner (7:00 PM):** Baked salmon (140g), boiled potatoes (200g), steamed zucchini (180g) with olive oil (10ml).
+  * Protein: 40g, Fat: 18g, Carbs: 55g
+  * **Prep time:** 15 minutes | **Cost:** $5.00
+
+* **Evening Snack (9:30 PM):** Lactose-free yogurt (150g, plain) with gluten-free granola (30g) and strawberries (70g).
+  * Protein: 16g, Fat: 9g, Carbs: 32g
+  * **Prep time:** 2 minutes | **Cost:** $2.00
+
+---
+
+**Daily Budget Total:** $16.50 (slightly over—reduce salmon to 120g to meet $15 budget)
+
+**Key Features:**
+- All foods are low-FODMAP and gluten-free compliant
+- High protein supports muscle recovery and building
+- Strategic carb timing around training sessions
+- Easily digestible foods minimize IBS flare-ups
+- Simple meals requiring minimal preparation time</pre></td>
+                <td class="score-col"><span class="score score-low">5</span></td>
+                <td class="reasoning">The solution successfully presents all mandatory requirements with clear formatting and structure. However, it fails to meet the secondary criteria of staying within the $15 budget (actual total is $16.50 without the suggested modification being implemented) and contains a low-FODMAP compliance error with the banana portion size. While the solution acknowledges the budget overage, it does not provide a corrected final plan, which is a critical oversight. The macronutrient targets are appropriate for the athlete's goals, and most food choices are suitable, but these violations of stated criteria prevent a higher score.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

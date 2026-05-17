@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "72",
+      "goal": "High-endurance athlete requiring 3000+ calories daily",
+      "restrictions": "Vegan, gluten-free, nut allergy"
+    },
+    "solution_criteria": [
+      "Meal plan totals 3000+ calories across all meals",
+      "All meals are vegan, gluten-free, and nut-free",
+      "Includes adequate protein sources for muscle recovery and endurance performance",
+      "Plan covers breakfast, lunch, dinner, and snacks for a full day"
+    ],
+    "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+    "scenario": "Testing with multiple simultaneous dietary restrictions (vegan, gluten-free, and nut allergy) for a high-endurance athlete requiring 3000+ calories"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "85",
+      "goal": "Build muscle mass through strength training while maintaining lean physique",
+      "restrictions": "Halal certified foods only, no pork, no alcohol, limited to chicken, beef, fish, eggs, rice, lentils, and vegetables due to food preferences"
+    },
+    "solution_criteria": [
+      "All meals use only halal-certified ingredients from the specified food list",
+      "Total daily protein intake supports muscle-building goals for an 85kg strength athlete",
+      "Meal plan is nutritionally balanced across breakfast, lunch, dinner, and snacks",
+      "All meals accommodate the athlete's limited food preferences without substitutions"
+    ],
+    "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+    "scenario": "Testing with religious dietary requirements (halal) combined with sports nutrition needs for a strength-training athlete with limited food preferences"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "75 kg",
+      "goal": "Build muscle and improve endurance for competitive cycling while managing IBS symptoms",
+      "restrictions": "Low-FODMAP diet, no gluten, budget of $15 per day, maximum 15 minutes prep time per meal"
+    },
+    "solution_criteria": [
+      "All meals comply with low-FODMAP and gluten-free restrictions",
+      "Total daily cost does not exceed $15",
+      "Each meal requires 15 minutes or less preparation",
+      "Meal plan provides adequate protein and carbohydrates to support athletic performance and muscle building"
+    ],
+    "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+    "scenario": "Testing with medical dietary restrictions (low-FODMAP for IBS) alongside athletic performance goals for an athlete with budget constraints and minimal cooking time"
+  }
+]
