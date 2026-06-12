@@ -138,7 +138,6 @@ Quando você estiver entre duas opções parecidas, pergunte a si mesmo qual del
 
 # PERGUNTAS DE EXAME
 
-Aqui estão as 10 questões:
 *RE: Resposta Escolhida*
 *RC: Resposta Certa*
 
