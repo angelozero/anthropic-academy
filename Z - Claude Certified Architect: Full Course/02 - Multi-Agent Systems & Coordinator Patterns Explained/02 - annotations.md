@@ -159,9 +159,9 @@ independentes, reduzindo drasticamente a latência fim a fim e mitigando o acúm
 
 
 ### Mecanismo / Abordagem Correta (Anthropic Style) / Pegadinha / Anti-padrão
-- Hierarquia / Coordinator dita o fluxo; Workers respondem apenas ao Coordinator. / Workers chamando outros Workers diretamente.
-- Contexto / Isolamento estrito. Passar apenas o bloco específico e dados brutos cruciais. /  Repassar a cadeia inteira de mensagens originais para cada subagente.
-- Transição / Retornar controle explicitamente ao Coordenador com payloads tipados. / Finalização implícita ou delegação em cadeia sem retorno.
+- Hierarquia / Coordinator dita o fluxo; Workers respondem apenas ao Coordinator.            / Workers chamando outros Workers diretamente.
+- Contexto   / Isolamento estrito. Passar apenas o bloco específico e dados brutos cruciais. /  Repassar a cadeia inteira de mensagens originais para cada subagente.
+- Transição  / Retornar controle explicitamente ao Coordenador com payloads tipados.         / Finalização implícita ou delegação em cadeia sem retorno.
 
 ---
 ---
