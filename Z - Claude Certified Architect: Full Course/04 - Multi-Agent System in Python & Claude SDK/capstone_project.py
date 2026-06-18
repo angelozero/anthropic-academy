@@ -10,7 +10,7 @@ What this covers (exam-relevant):
   Escalation → when to hand off to a human: explicit customer request,
                requests beyond agent authority, or repeated failures
 
-Cost: ~5–10 API calls total, all using claude-haiku-4-5
+Cost: ~5-10 API calls total, all using claude-haiku-4-5
       Expect < $0.01 USD to run the whole demo.
 
 Setup:
