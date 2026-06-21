@@ -138,3 +138,6 @@ D) Adicionar few-shot examples mostrando o uso correto da ferramenta para carreg
 - c
 ---
 
+### Exame teste realizado em 21 - Jun - 2026
+#### Score: 591
+![alt text](image.png)
