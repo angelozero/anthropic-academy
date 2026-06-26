@@ -1,0 +1,107 @@
+### O contexto é apenas para testes ? Para que de fato ele serve ?
+
+**Não, de jeito nenhum!** O exemplo do slide usa testes (`.test.tsx`), mas esse mecanismo serve para **qualquer tipo de padrão, tecnologia ou arquitetura** dentro do seu repositório.
+
+Você pode criar regras baseadas em caminhos para isolar o contexto de absolutamente tudo. Pense nisso como criar "manuais de instrução personalizados" que o Claude só lê quando abre a pasta certa.
+
+Veja alguns exemplos práticos de como você usaria isso em outras partes do desenvolvimento:
+
+---
+
+### 1. Regras para Banco de Dados e Modelos (Backend)
+
+Se você tem regras estritas de validação ou segurança para tabelas e modelos, você não quer o Claude pensando nisso quando estiver mexendo no CSS do Front-end.
+
+```yaml
+---
+description: Regras de validação e segurança para modelos do banco de dados
+paths: ["src/models/**/*.py", "src/schemas/**/*.py"]
+---
+# Instruções específicas para o Claude:
+# - Sempre use Pydantic v2 para validação.
+# - Nunca retorne o campo 'password_hash' nas consultas.
+
+```
+
+### 2. Regras para Documentação de API (Swagger / OpenAPI)
+
+Para garantir que toda nova rota siga o padrão de documentação da empresa.
+
+```yaml
+---
+description: Padrão de escrita para contratos de API
+paths: ["**/routes/**/*.ts", "**/controllers/**/*.ts"]
+---
+# Instruções específicas para o Claude:
+# - Sempre inclua decorators do Swagger detalhando o Status 400 e 500.
+
+```
+
+### 3. Isolando Arquiteturas Diferentes (Ex: Monorepos)
+
+Se você trabalha em um projeto que tem o Front-end (React) e o Back-end (Python/Java) no mesmo repositório, você pode impedir que as regras de um vazem para o outro:
+
+* **Para a pasta do Front:** `paths: ["packages/frontend//*"]` $\rightarrow$ Injeta regras de componentização, hooks e design system.
+* **Para a pasta do Back:** `paths: ["packages/backend//*"]` $\rightarrow$ Injeta regras de rotas, performance, logs e ORM.
+
+---
+
+### Resumo para a Prova
+
+O `paths` aceita qualquer expressão **Glob** (como `/*.extensao`, `pasta//*`, `*nome*`).
+
+Na arquitetura do Claude, isso se chama **Modularização de Prompts de Sistema**. O objetivo é um só: dar ao modelo **apenas o conhecimento necessário para a tarefa atual**, independentemente de ser um arquivo de teste, uma rota de API, um componente visual ou um script de deploy.
+
+### Como fica a estrutura em um projeto real ?
+
+**Sim, fica em um arquivo isolado!** Você não coloca esse bloco de código dentro dos seus arquivos de código-fonte normais (como o seu componente ou o seu arquivo de teste real).
+
+Essas regras ficam em arquivos de configuração dedicados (geralmente chamados de arquivos de "regras do sistema" ou "regras de contexto"), que ficam salvos dentro do próprio repositório para que ferramentas como o Claude Code ou IDEs integradas possam lê-los.
+
+---
+
+### Como é a estrutura na prática?
+
+Imagine a estrutura de pastas do seu projeto. Esses arquivos de regras costumam ficar concentrados em uma pasta específica na raiz do projeto (como uma pasta `.claude/` ou `.github/` dependendo da ferramenta, ou simplesmente espalhados como arquivos `.md` ou `.txt` de configuração).
+
+Olha como seria a organização no seu repositório:
+
+```text
+meu-projeto/
+├── .claude/
+│   ├── regras-testes.md       <-- O ARQUIVO ISOLADO FICA AQUI!
+│   └── regras-backend.md      <-- Outro arquivo isolado para o back-end
+├── src/
+│   ├── components/
+│   │   ├── Button.tsx
+│   │   └── Button.test.tsx    <-- Quando o Claude abrir este arquivo...
+└── package.json
+
+```
+
+---
+
+### O que tem dentro desse arquivo isolado (`regras-testes.md`)?
+
+Ele junta o cabeçalho (YAML Frontmatter) que você viu no slide com as instruções em texto puro (Markdown) logo abaixo. O arquivo completo se parece com isto:
+
+```markdown
+---
+description: React component testing patterns
+paths: ["**/*.test.tsx", "**/*.spec.ts"]
+---
+
+# Diretrizes de Teste para o Claude
+1. Sempre use a biblioteca 'vitest' e '@testing-library/react'.
+2. Todo componente deve ter pelo menos um teste de renderização e um teste de comportamento (clique/interação).
+3. Nunca faça mock de funções internas do componente, teste apenas a interface pública.
+
+```
+
+### O Fluxo Final
+
+1. O arquivo `regras-testes.md` fica lá, quietinho na dele.
+2. Quando você começa a conversar com o Claude sobre o arquivo `Button.test.tsx`, o Claude "olha" para aquele arquivo isolado de regras.
+3. Ele lê o `paths: ["/*.test.tsx", ...]`, vê que dá match e fala: *"Opa, preciso ler o resto desse arquivo aqui para saber como o usuário quer os testes dele"*.
+
+Isso mantém o seu código limpo e as suas regras centralizadas em um só lugar! Ficou mais claro como eles se conectam no projeto?
