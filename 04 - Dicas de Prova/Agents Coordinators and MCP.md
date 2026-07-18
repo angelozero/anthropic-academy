@@ -23,3 +23,6 @@
 - Sempre utilize o coordinator para analizar cada query e dinamicamente decidir para qual sub-agente deve ser invocado
 - O coordinator tem sempre a função de analisar cada query e DINAMICAMENTE decidir qual sub-agent ira ser invocado
 - Um coordinator sem Task no allowedTools faz com que ele não consiga chamar um sub-agente ( diz que chama e não ha erros no sintoma )
+
+# MCP
+- Sempre exponha o MCP catalog para os agentes / tools 
