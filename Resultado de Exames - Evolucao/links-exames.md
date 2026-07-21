@@ -15,3 +15,6 @@ https://www.udemy.com/course/anthropic-claude-certified-architect-3-full-practic
 
 ### 08-score.png
 https://github.com/angelozero/anthropic-academy/blob/main/05%20-%20Claude%20Certified%20Architect%20Foundations%20Certification%20Exam/Claude%20Certification%20Exam.md
+
+### 09-score.png
+https://ccaf.cyberskill.world/result
